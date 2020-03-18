@@ -12,7 +12,11 @@ For each registered `DataSource`, Micronaut will configure the following jOOQ be
 * link:{jooqapi}/org/jooq/Configuration.html[Configuration] - jOOQ `Configuration`
 * link:{jooqapi}/org/jooq/DSLContext.html[DSLContext] - jOOQ `DSLContext`
 
-If Spring transaction management is in use, it will additionally create the following beans :
+To use Micronaut-based transaction management also add the following dependency:
+
+dependency:micronaut-data-tx[groupId="io.micronaut.data"]
+
+If Spring transaction management is in use, it will instead create the following beans :
 
 * api:configuration.jooq.JooqExceptionTranslatorProvider[] for each `DataSource`
 * api:configuration.jooq.SpringTransactionProvider[] for each Spring `PlatformTransactionManager`
